@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planets: Earth</title>
+        <link rel="stylesheet" href="duzenleme.css">
+    </head>
+    <body>
+        <div class="content">
+            <header class="header"> 
+                <div class="navbar-menu"> 
+                    <div class="left-group">
+                        <span >PLANETS</span>
+                    </div>
+                    <div class="right-group">
+                        <div class="menu">
+                            <div class="item"><a href="#">MERCURY</a></div>
+                            <div class="item"><a href="#">VENUS</a></div>
+                            <div class="item"><a href="#">EARTH</a></div>
+                            <div class="item"><a href="#">MARS</a></div>
+                            <div class="item"><a href="#">JUPITER</a></div>
+                            <div class="item"><a href="#">SATURN</a></div>
+                            <div class="item"><a href="#">URANUS</a></div>
+                            <div class="item"><a href="#">NEPTUN</a></div>
+                        </divs>
+                    </div>
+                </div>
+            </header>
+            <div class="container" >
+                <div class="eart-content">
+                    <div class="left-content">
+                        <img src="img/earth.png" alt="earth" />
+                    </div>
+                    <div class="right-content">
+                        <div class="panel">
+                            <div class="text-content">
+                                <h1>EARTH</h1>
+                                <p id="icerik" class="sayfa-icerik">
+                                    Third planet from the Sun and the only known Planets
+                                    to harbor life. About 29.2% of Earth's surface is land 
+                                    with remaining 70.8% is covered with water. Earth's
+                                    distance from the Sun, physical properties and geological
+                                     history have allowed life to evolve and thrive.
+                                </p>
+                            </div>
+                            <div class="bottom-content">
+                                <button class="active-btn active" onclick="btnclick(this,'Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth\'s surface is land  with remaining 70.8% is covered with water. Earth\'s distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.')">
+                                    <span>01</span>
+                                    <strong>OVERVIEW</strong>
+                                </button>
+                                <button class="active-btn " onclick="btnclick(this,'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra, risus ac eleifend mollis, leo dui lacinia risus, sit amet pretium quam augue sit amet ligula. Donec lobortis ornare nulla eu pulvinar. Proin pharetra nisi nec arcu scelerisque, at molestie magna lobortis. Nullam eget libero vel lacus tempor egestas quis feugiat dui.')"><span>02</span><strong>INTERNAL STRUCTURE</strong></button>
+                                <button class="active-btn " onclick="btnclick(this,'Suspendisse posuere, orci eu gravida dictum, eros metus auctor risus, nec luctus tellus ex at sapien. Praesent massa sem, dictum vitae ultricies quis, mollis a ex. Aliquam lectus diam, mollis sit amet aliquet eget, bibendum ut lacus. Vestibulum posuere tellus ac metus ultricies,')"><span>03</span><strong>SURFACE GEOLOGY</strong></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class ="container">
+                <div class="bottom-info">
+                    <div class="text">
+                        <span class="title">ROTATION TIME</span>
+                        <span class="value">0.99 DAYS</span>
+                    </div>
+                    <div class="text">
+                        <span class="title">REVOLUTION TIME</span>
+                        <span class="value">365.26 DAYS</span>
+                    </div>
+                    <div class="text">
+                        <span class="title">RADIUS</span>
+                        <span class="value">6,371 KM</span>
+                    </div>
+                    <div class="text">
+                        <span class="title">AVERAGE TEMP</span>
+                        <span class="value">16°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function btnclick(button,icerik) {
+                var butonlar = document.getElementsByClassName("active-btn");
+                for (var i = 0; i < butonlar.length; i++) {
+                    butonlar[i].classList.remove("active");
+                }
+                button.classList.add("active");
+                document.getElementById("icerik").innerHTML=icerik;
+            }
+        </script>
+    </body>
+</html>
